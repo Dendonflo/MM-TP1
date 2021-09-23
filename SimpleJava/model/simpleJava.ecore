@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="simpleJava" nsURI="http://www.example.org/simpleJava" nsPrefix="simpleJava">
+  <eClassifiers xsi:type="ecore:EClass" name="JClass">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jinterface" upperBound="-1"
+        eType="#//JInterface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jfield" upperBound="-1"
+        eType="#//JField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supClass" eType="#//JClass"
+        eOpposite="#//JClass/subclass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subclass" lowerBound="1"
+        eType="#//JClass" eOpposite="#//JClass/supClass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jmethod" upperBound="-1"
+        eType="#//JMethod" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JField">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="share" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jvalue" upperBound="-1"
+        eType="#//JValue" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jtype" lowerBound="1" eType="#//JType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JValue"/>
+  <eClassifiers xsi:type="ecore:EClass" name="JInterface">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jfield" upperBound="-1"
+        eType="#//JField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supInterface" upperBound="-1"
+        eType="#//JInterface" eOpposite="#//JInterface/subInterface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subInterface" eType="#//JInterface"
+        eOpposite="#//JInterface/supInterface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jmethod" upperBound="-1"
+        eType="#//JMethod" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JReferenceType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jtype" lowerBound="1" eType="#//JType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jclass" lowerBound="1"
+        eType="#//JClass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="JPrimitiveType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jtype" lowerBound="1" eType="#//JType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JInt">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//JPrimitiveType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JString">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//JPrimitiveType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JMethod">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="share" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jparameter" upperBound="-1"
+        eType="#//JParameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jtype" eType="#//JType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JParameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jtype" eType="#//JType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JModifier">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibility" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shape" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JProgram">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jpackage" upperBound="-1"
+        eType="#//JPackage" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jmodifier" lowerBound="3"
+        upperBound="3" eType="#//JModifier" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JPackage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jclass" upperBound="-1"
+        eType="#//JClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jinterface" upperBound="-1"
+        eType="#//JInterface" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

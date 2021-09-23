@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simpleJava:JProgram
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:simpleJava="http://www.example.org/simpleJava"
+    xsi:schemaLocation="http://www.example.org/simpleJava simpleJava.ecore">
+  <jpackage>
+    <jclass>
+      <jfield>
+        <jvalue/>
+      </jfield>
+      <jmethod>
+        <jparameter/>
+      </jmethod>
+      <jmethod>
+        <jparameter/>
+        <jparameter/>
+      </jmethod>
+    </jclass>
+    <jinterface>
+      <jmethod>
+        <jparameter/>
+      </jmethod>
+      <jmethod>
+        <jparameter/>
+        <jparameter/>
+      </jmethod>
+    </jinterface>
+  </jpackage>
+  <jpackage>
+    <jclass>
+      <jfield>
+        <jvalue/>
+      </jfield>
+      <jfield>
+        <jvalue/>
+      </jfield>
+      <jmethod>
+        <jparameter/>
+      </jmethod>
+    </jclass>
+    <jclass>
+      <jfield>
+        <jvalue/>
+      </jfield>
+      <jmethod>
+        <jparameter/>
+      </jmethod>
+    </jclass>
+  </jpackage>
+</simpleJava:JProgram>

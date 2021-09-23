@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filesystem:FileSystem
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:filesystem="http://filesystem/1.0"
+    xsi:schemaLocation="http://filesystem/1.0 fileSystem.ecore">
+  <disk ID="C">
+    <folder
+        name="Windows">
+      <file
+          name="explorer.exe"/>
+    </folder>
+    <folder
+        name="Users">
+      <folder
+          name="User1">
+        <folder
+            name="Pictures">
+          <file
+              name="pic1.jpg"/>
+          <file
+              name="pic2.jpg"/>
+        </folder>
+        <folder
+            name="Documents">
+          <file
+              name="taxes.txt"/>
+        </folder>
+      </folder>
+      <folder
+          name="UserInvite">
+        <folder
+            name="Pictures"/>
+      </folder>
+    </folder>
+  </disk>
+  <disk ID="D">
+    <folder
+        name="Movie collection">
+      <file
+          name="mov1.mkv"/>
+      <file
+          name="mov2.mkv"/>
+      <file
+          name="mov3.mkv"/>
+      <folder
+          name="To sort">
+        <file
+            name="mov128.mkv"/>
+        <file
+            name="mov15.mkv"/>
+      </folder>
+    </folder>
+  </disk>
+</filesystem:FileSystem>

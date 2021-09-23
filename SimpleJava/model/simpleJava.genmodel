@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/SimpleJava/src-gen" creationIcons="false" editDirectory="/SimpleJava.edit/src-gen"
+    editorDirectory="/SimpleJava.editor/src-gen" modelPluginID="SimpleJava" modelName="SimpleJava"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>simpleJava.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="SimpleJava" disposableProviderFactory="true" ecorePackage="simpleJava.ecore#/">
+    <genClasses ecoreClass="simpleJava.ecore#//JClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleJava.ecore#//JClass/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JClass/jinterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JClass/jfield"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JClass/supClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JClass/subclass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JClass/jmethod"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleJava.ecore#//JField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleJava.ecore#//JField/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleJava.ecore#//JField/share"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JField/jvalue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JField/jtype"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleJava.ecore#//JValue"/>
+    <genClasses ecoreClass="simpleJava.ecore#//JInterface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleJava.ecore#//JInterface/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JInterface/jfield"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JInterface/supInterface"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JInterface/subInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JInterface/jmethod"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleJava.ecore#//JReferenceType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JReferenceType/jtype"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JReferenceType/jclass"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleJava.ecore#//JType"/>
+    <genClasses ecoreClass="simpleJava.ecore#//JPrimitiveType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JPrimitiveType/jtype"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleJava.ecore#//JInt">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JInt/type"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleJava.ecore#//JString">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JString/type"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleJava.ecore#//JMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleJava.ecore#//JMethod/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleJava.ecore#//JMethod/share"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JMethod/jparameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JMethod/jtype"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleJava.ecore#//JParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleJava.ecore#//JParameter/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JParameter/jtype"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleJava.ecore#//JModifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleJava.ecore#//JModifier/visibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleJava.ecore#//JModifier/shape"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleJava.ecore#//JProgram">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleJava.ecore#//JProgram/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JProgram/jpackage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JProgram/jmodifier"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleJava.ecore#//JPackage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleJava.ecore#//JPackage/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JPackage/jclass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simpleJava.ecore#//JPackage/jinterface"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
